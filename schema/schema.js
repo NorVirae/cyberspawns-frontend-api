@@ -4,8 +4,17 @@ const {Sequelize, DataTypes, where} = require('sequelize');
 const db = require('../db/db');
 const spawnsModel = require('../models/spawns.model');
 const statsModel = require('../models/stats.model');
+const { getTimeStamp } = require('../functions');
 require('dotenv').config()
 
+
+
+const Spawns = spawnsModel
+const Stats = statsModel
+const sequelize = db
+const {GraphQLObjectType,GraphQLSchema, GraphQLFloat, GraphQLInt, GraphQLID, GraphQLBoolean, GraphQLList, GraphQLString} = graphql
+
+console.log(DataTypes.NOW)
 const restructureResult = (Arr) => {
     let newDats = []
     Arr.map(eachData=>{
@@ -16,10 +25,12 @@ const restructureResult = (Arr) => {
 }
 
 
-
-const sequelize = db
-
-
+const SyncDb = (tabList)=>{
+    tabList.map(tabs => {
+        tabs.sync({force:false})
+    })
+    
+}
 
 const checkConnection = () =>{
     sequelize.authenticate().then(res => {
@@ -29,18 +40,14 @@ const checkConnection = () =>{
     })
 }
 
-
 checkConnection()
+SyncDb([Spawns, Stats])
 
 
 
-const Spawns = spawnsModel
-const Stats = statsModel
-Stats.sync({alter:true})
-Spawns.sync({alter:true})
 
 
-const {GraphQLObjectType,GraphQLSchema, GraphQLFloat, GraphQLInt, GraphQLID, GraphQLBoolean, GraphQLList, GraphQLString} = graphql
+
 
 const StatsType = new GraphQLObjectType({
     name: "Stats",
@@ -58,8 +65,8 @@ const SpawnType = new GraphQLObjectType({
     fields: () =>({
             id:{type:GraphQLInt},
             spawnid:{type:GraphQLInt},
-            updatedAt:{type:GraphQLString},
-            createdAt:{type:GraphQLString},
+            createdAt:{type:GraphQLInt},
+            updatedAt:{type:GraphQLInt},
             ownerid:{type:GraphQLID},
             birthdate:{type:GraphQLInt},
             price:{type:GraphQLFloat},
@@ -203,6 +210,7 @@ const Mutation = new GraphQLObjectType({
 
         async resolve(parent, args){
             try {
+                console.log("LOOK HERE")
                 const stats = {speed:args.speed, health:args.health, morale:args.morale, skill:args.skill}
                 const newStats = await  Stats.create({
                     morale:args.morale,
@@ -210,11 +218,18 @@ const Mutation = new GraphQLObjectType({
                     health:args.health,
                     speed:args.speed
                 })
+                
                 args.statsid = newStats.dataValues.id
+                console.log(args)
+                try{
+                    const newSpawn = await Spawns.create(args)
+                    return newSpawn.dataValues
+                }catch(err){
+                    console.log(err)
+                }
+                 console.log(newSpawn)
 
-                const newSpawn = await Spawns.create(args)
-
-                return newSpawn.dataValues
+                
 
             }
             catch(err){
@@ -233,11 +248,11 @@ const Mutation = new GraphQLObjectType({
                 where:{id:args.id}
             })
             return oneSpawn?oneSpawn.dataValues:{}
-        }
-
-        catch(err){
-            throw new console.error(err);
             }
+
+            catch(err){
+                throw new console.error(err);
+                }
         }
 
     },
@@ -246,7 +261,6 @@ const Mutation = new GraphQLObjectType({
          type:SpawnType,
          args:{id:{type:GraphQLInt},
          ownerid:{type:GraphQLID},
-         birthdate:{type:GraphQLString},
          chain:{type: GraphQLString},
          children:{type: new GraphQLList(GraphQLInt)},
          parents:{type: new GraphQLList(GraphQLInt)},
@@ -268,18 +282,20 @@ const Mutation = new GraphQLObjectType({
         },
          async resolve(parent, args){
              try{
-                let editedSpawn = await Spawns.update(args,{
-                    where:{id:args.id},
-                    returning:true
+                    let editedSpawn = await Spawns.update(args,{
+                        where:{id:args.id},
+                        returning:true
                 })
-                let resultedSpawn = await Spawns.findOne({
-                    where:{id:args.id}
+
+                    let resultedSpawn = await Spawns.findOne({
+                        where:{id:args.id}
                 })
-                return resultedSpawn.dataValues
+
+                    
                 }
             catch(err){
-                throw new console.error(err);
-                return {}
+                    throw new console.error(err);
+                    return {}
             }
         }
      },
@@ -294,9 +310,11 @@ const Mutation = new GraphQLObjectType({
                     where:{id:args.id}
                 })
                 const statId = fetchOne.dataValues.statsid
+
                 const deletedSpawn = await Spawns.destroy({
                     where:{id:args.id}
                 })
+
                 const deleteStats = await Stats.destroy({
                     where:{id:statId}
                 })
@@ -400,10 +418,10 @@ const Mutation = new GraphQLObjectType({
     resolve(parents, args){
         return "Spawns.findById(args.id)"
             }
-
         },
     }
 })
+
 
 module.exports = new GraphQLSchema({
     query:RootQueryType,

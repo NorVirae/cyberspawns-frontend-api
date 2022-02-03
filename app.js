@@ -34,7 +34,7 @@ app.post("/create/spawn", async(req, res)=> {
         const data = req.body
         const newSpawn = await Pool.query(`INSERT INTO spawns(spawnid, ownerid, birthdate, chain, level, class, name, parts, breedcount) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *`,
          [data.spawnid, data.ownerid, data.birthdate, data.chain, data.level, data.class, data.name, data.parts, data.breedcount])
-        res.send({data:newSpawn,msg: "CHECK HERE"})
+        res.send({data:newSpawn, msg: "CHECK HERE"})
 
     }catch(err){
 

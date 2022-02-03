@@ -1,8 +1,8 @@
 {"DB":{
-    "DB_USER" : "otuhcofpydvqxd",
-    "DB_DATABASE" : "d1s4nt4u8bkgv9",
-    "DB_HOST" : "ec2-184-73-243-101.compute-1.amazonaws.com",
-    "DB_PASSWORD" : "65ce374865a80cbfa61caa799936871b42cb3dd0600517d0830cda11c94f9345",
+    "DB_USER" : "kbeifydakwpqvx",
+    "DB_DATABASE" : "d8ndinoggabrou",
+    "DB_HOST" : "ec2-52-31-201-170.eu-west-1.compute.amazonaws.com",
+    "DB_PASSWORD" : "9777029f7e87c78e5f6d16e02bec109d2be12138d50ad31af9cff0d429818bc3",
     "DB_PORT" : 5432,
     "NODE_ENV" : "production"
     }

@@ -25,8 +25,8 @@ const innitiateConstraints = () => {
         Spawns.hasOne(SpawnParts, {foreignKey:"id"})
         SpawnParts.belongsTo(Spawns, {foreignKey:"id"})
         // parents
-        Spawns.hasOne(SpawnsParents, {foreignKey:"spawnId"})
-        SpawnsParents.belongsTo(Spawns, {foreignKey:"id"})
+        Spawns.hasOne(SpawnsParents, {foreignKey:"spawnid"})
+        SpawnsParents.belongsTo(Spawns, {foreignKey:"spawnId"})
 
     }catch(err){
         throw new Error("FROM INNITIATE CONSTRAINTS: ",err)

@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize")
 const sequelize = require("../db/db")
 
 
-module.exports = sequelize.define("spawnParents", {
+module.exports = sequelize.define("spawn", {
     id: {type:DataTypes.BIGINT, primaryKey:true}, 
     spawnId: {type:DataTypes.UUID}, 
     parentX: {type:DataTypes.UUID}, 
@@ -11,6 +11,6 @@ module.exports = sequelize.define("spawnParents", {
    
 
 },
-{tableName:"spawnParents"},
+{tableName:"spawnSkills"},
 {timestamps:true}
 )

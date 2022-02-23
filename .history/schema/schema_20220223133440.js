@@ -26,7 +26,7 @@ const innitiateConstraints = () => {
         SpawnParts.belongsTo(Spawns, {foreignKey:"id"})
         // parents
         Spawns.hasOne(SpawnsParents, {foreignKey:"id"})
-        Spawns.belongsTo(Spawns, {foreignKey:"spawnId"})
+        Spawns.belongsTo(Spawns, {foreignKey:"spawn"})
 
     }catch(err){
         throw new Error("FROM INNITIATE CONSTRAINTS: ",err)
@@ -71,7 +71,6 @@ const checkConnection = () =>{
 
 checkConnection()
 SyncDb([Spawns, SpawnsSkills, SpawnParts, SpawnsParents, battleInfo])
-innitiateConstraints()
 
 
 

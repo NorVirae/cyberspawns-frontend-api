@@ -70,8 +70,9 @@ const checkConnection = () =>{
 }
 
 checkConnection()
+Spawns.hasOne(SpawnsParents, {foreignKey:"id"})
+
 SyncDb([Spawns, SpawnsSkills, SpawnParts, SpawnsParents, battleInfo])
-innitiateConstraints()
 
 
 

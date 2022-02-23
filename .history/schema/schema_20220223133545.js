@@ -70,8 +70,8 @@ const checkConnection = () =>{
 }
 
 checkConnection()
+i
 SyncDb([Spawns, SpawnsSkills, SpawnParts, SpawnsParents, battleInfo])
-innitiateConstraints()
 
 
 

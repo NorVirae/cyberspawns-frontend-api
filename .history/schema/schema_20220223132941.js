@@ -21,16 +21,8 @@ const sequelize = db
 
 const innitiateConstraints = () => {
     try{
-        // Parts
         Spawns.hasOne(SpawnParts, {foreignKey:"id"})
-        SpawnParts.belongsTo(Spawns, {foreignKey:"id"})
-        // parents
-        Spawns.hasOne(SpawnsParents, {foreignKey:"id"})
-        Spawns.belongsTo(Spawns, {foreignKey:"spawnId"})
-
-    }catch(err){
-        throw new Error("FROM INNITIATE CONSTRAINTS: ",err)
-    }
+    }catch(err)
 }
 const {GraphQLObjectType,GraphQLSchema, GraphQLFloat, GraphQLInt, GraphQLID, GraphQLBoolean, GraphQLList, GraphQLString} = graphql
 
@@ -71,7 +63,6 @@ const checkConnection = () =>{
 
 checkConnection()
 SyncDb([Spawns, SpawnsSkills, SpawnParts, SpawnsParents, battleInfo])
-innitiateConstraints()
 
 
 

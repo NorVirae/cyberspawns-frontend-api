@@ -3,7 +3,8 @@ const sequelize = require("../db/db")
 
 
 module.exports = sequelize.define("spawnSkills", {
-    id:{type:DataTypes.BIGINT, primaryKey:true},
+    id:{type:DataTypes.BIGINT, primaryKey
+    }
     spawnId: {type:DataTypes.UUID}, 
     skill1: {type:DataTypes.UUID}, 
     skill2: {type:DataTypes.UUID}, 

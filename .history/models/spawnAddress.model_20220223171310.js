@@ -11,6 +11,6 @@ module.exports = sequelize.define("spawnAddresses", {
    
 
 },
-{tableName:"spawnAddresses"},
+{tableName:"spawn"},
 {timestamps:true}
 )

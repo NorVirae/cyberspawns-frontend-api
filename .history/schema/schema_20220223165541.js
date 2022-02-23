@@ -9,7 +9,6 @@ const spawnPartsModel = require('../models/spawnParts.model');
 const spawnParentsModel = require('../models/spawnParents.model');
 const battleInfoModel = require('../models/battleInfo.model');
 const spawnAddressModel = require('../models/spawnAddress.model');
-const skillsModel = require('../models/skills.model');
 require('dotenv').config()
 
 
@@ -20,7 +19,6 @@ const SpawnAddress = spawnAddressModel
 const SpawnParts = spawnPartsModel
 const SpawnsParents = spawnParentsModel
 const BattleInfo = battleInfoModel
-const Skill = skillsModel
 const sequelize = db
 
 const innitiateConstraints = () => {
@@ -38,9 +36,7 @@ const innitiateConstraints = () => {
 }
 const {GraphQLObjectType,GraphQLSchema, GraphQLFloat, GraphQLInt, GraphQLID, GraphQLBoolean, GraphQLList, GraphQLString} = graphql
 
-// Author:  Frank
-// Restructure Result
-// is a function that processes data returned by sequelize so its graphql friendly
+console.log(DataTypes.NOW)
 const restructureResult = (Arr) => {
     try{
         let newDats = []
@@ -77,7 +73,7 @@ const checkConnection = () =>{
 
 try{
     checkConnection()
-    SyncDb([Spawns, SpawnSkills, Skill, SpawnParts, SpawnsParents, BattleInfo, SpawnAddress])
+    SyncDb([Spawns, SpawnSkills, SpawnParts, SpawnsParents, BattleInfo, SpawnAddress])
     innitiateConstraints()
 }catch(err){
     console.log(err)
@@ -217,10 +213,8 @@ const SpawnType = new GraphQLObjectType({
                         })
                         const skillsObj = fetchSpawnSkills.dataValues
 
-                        const spawnSkillCollection = await Skill.findAll({
-                            where:{id:[skillsObj.skill1, skillsObj.skill2, skillsObj.skill3]}
-                        })
-                        return restructureResult(spawnSkillCollection)
+                        const spawn skill
+                        return fetchSpawnSkills.dataValues
                 }catch(err){
                     throw new Error("TRACEBACK spawnskills: "+err)
                 }

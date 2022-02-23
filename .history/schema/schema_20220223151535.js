@@ -8,19 +8,15 @@ const spawnSkillsModel = require('../models/spawnSkills.model');
 const spawnPartsModel = require('../models/spawnParts.model');
 const spawnParentsModel = require('../models/spawnParents.model');
 const battleInfoModel = require('../models/battleInfo.model');
-const spawnAddressModel = require('../models/spawnAddress.model');
-const skillsModel = require('../models/skills.model');
 require('dotenv').config()
 
 
 
 const Spawns = spawnsModel
-const SpawnSkills = spawnSkillsModel
-const SpawnAddress = spawnAddressModel
+const SpawnsSkills = spawnSkillsModel
 const SpawnParts = spawnPartsModel
 const SpawnsParents = spawnParentsModel
-const BattleInfo = battleInfoModel
-const Skill = skillsModel
+const battleInfo = battleInfoModel
 const sequelize = db
 
 const innitiateConstraints = () => {
@@ -38,9 +34,7 @@ const innitiateConstraints = () => {
 }
 const {GraphQLObjectType,GraphQLSchema, GraphQLFloat, GraphQLInt, GraphQLID, GraphQLBoolean, GraphQLList, GraphQLString} = graphql
 
-// Author:  Frank
-// Restructure Result
-// is a function that processes data returned by sequelize so its graphql friendly
+console.log(DataTypes.NOW)
 const restructureResult = (Arr) => {
     try{
         let newDats = []
@@ -77,78 +71,26 @@ const checkConnection = () =>{
 
 try{
     checkConnection()
-    SyncDb([Spawns, SpawnSkills, Skill, SpawnParts, SpawnsParents, BattleInfo, SpawnAddress])
+    SyncDb([Spawns, SpawnsSkills, SpawnParts, SpawnsParents, battleInfo])
     innitiateConstraints()
 }catch(err){
     console.log(err)
 }
 
 
-const UserType = new GraphQLObjectType({
-    name:"User",
-    fields: () =>({
-            id:{type:GraphQLID},
-            username:{type:GraphQLString},
-            email:{type:GraphQLString},
-            password:{type: GraphQLString},
-            role:{type:GraphQLString},
-            image:{type:GraphQLString},
-            isVerified:{type:GraphQLBoolean},
-            
-    })
-})
-
-const SpawnSkillType = new GraphQLObjectType({
-    name:"SpawnSkill",
-    fields: () =>({
-            id:{type:GraphQLInt},
-            spawnId:{type:GraphQLID},
-            skill1:{type:GraphQLID},
-            skill2:{type: GraphQLID},
-            skill3:{type:GraphQLID},  
-    })
-})
-
-const SpawnAddressType = new GraphQLObjectType({
-    name:"SpawnAddress",
-    fields: () =>({
-            spawnId:{type:GraphQLID},
-            metadata:{type:GraphQLString},
-            imageAtlas:{type: GraphQLString},
-            atlas:{type:GraphQLString},  
-    })
-})
-
-const SkillsType = new GraphQLObjectType({
-    name:"Skills",
-    fields: () =>({
-            id:{type:GraphQLID},
-            imageAddress:{type:GraphQLString},
-            metaDataAddress:{type: GraphQLString},
-    })
-})
-
-const SpawnPartsType = new GraphQLObjectType({
-    name:"SpawnParts",
-    fields: () =>({
-            id:{type:GraphQLID},
-            name:{type:GraphQLString},
-            imageAddress:{type: GraphQLString},
-            class:{type: GraphQLString},
-            level:{type: GraphQLInt},
-
-    })
-})
 
 
-const BattleInfoType = new GraphQLObjectType({
-    name:"BattleInfoType",
-    fields: () =>({
-            spawnId:{type:GraphQLID},
-            level:{type: GraphQLInt},
-            battlesWon:{type: GraphQLInt},
-            level:{type: GraphQLInt},
 
+
+
+const StatsType = new GraphQLObjectType({
+    name: "Stats",
+    fields: () => ({
+        id:{type:GraphQLInt},
+        skill:{type:GraphQLInt},
+        speed:{type:GraphQLInt},
+        health:{type:GraphQLInt},
+        morale:{type:GraphQLInt},
     })
 })
 
@@ -167,98 +109,56 @@ const SpawnType = new GraphQLObjectType({
             updatedAt:{type:GraphQLInt},
             tokenId:{type:GraphQLInt},
             price:{type:GraphQLFloat},
+
+            ownerid:{type:GraphQLID},
             children:{type:new GraphQLList(SpawnType),
                 async resolve(parent){
                     try{
-                        
-                        let listedChildren = await Spawns.findAll({
-                            where:{id:parent.id}
+                        let spawnParents = await SpawnsParents.findOne({
+                            where:{spawnId:parent.id}
                         })
-                        return restructureResult(listedChildren)
+                        let listedSpawns = await Spawns.findAll({
+                            where:{id:[spawnParents.parentX, spawnParents.parentY]}
+                        })
+                        return restructureResult(listedSpawns)
                     }
                     catch(err){
                         return []
                     }
                 }},
-
+                
             parents:{type:new GraphQLList(SpawnType),
                     async resolve(parent){
                         try{
                             let spawnParents = await SpawnsParents.findOne({
                                 where:{spawnId:parent.id}
                             })
-                            let listedParent = await Spawns.findAll({
+                            let listedSpawns = await Spawns.findAll({
                                 where:{id:[spawnParents.parentX, spawnParents.parentY]}
                             })
-                            return restructureResult(listedParent)
+                            return restructureResult(listedSpawns)
                         }
                         catch(err){
                             return []
                         }
                     }},
-            battleInfo:{type:BattleInfoType,
-                async resolve (parent) {
-                    try{
-                        const fetchBattleInfo = await BattleInfo.findOne({
-                            where:{spawnId:parent.id}
-                        })
-                        return fetchBattleInfo.dataValues
-                }catch(err){
-                    throw new Error(err)
-                }
-              }
-            },
-
-            spawnSkills:{type:new GraphQLList(SkillsType),
-                async resolve (parent) {
-                    try{
-                        const fetchSpawnSkills = await SpawnSkills.findOne({
-                            where:{spawnId:parent.id}
-                        })
-                        const skillsObj = fetchSpawnSkills.dataValues
-
-                        const spawnSkillCollection = await Skill.findAll({
-                            where:{id:[skillsObj.skill1, skillsObj.skill2, skillsObj.skill3]}
-                        })
-                        return restructureResult(spawnSkillCollection)
-                }catch(err){
-                    throw new Error("TRACEBACK spawnskills: "+err)
-                }
-              } 
-            },
-
-            spawnAddress:{type: SpawnAddressType,
-                async resolve (parent) {
-                    try{
-                        const fetchSpawnAddress = await SpawnAddress.findOne({
-                            where:{spawnId:parent.id}
-                        })
-                        return fetchSpawnAddress.dataValues
-                }catch(err){
-                    throw new Error("TRACEBACK spawnskills: "+err)
-                }
-              } 
-            },
-
-            spawnParts:{type: SpawnPartsType,
-                async resolve (parent) {
-                    try{
-                        const fetchSpawnParts = await SpawnParts.findOne({
-                            where:{spawnId:parent.id}
-                        })
-                        return fetchSpawnParts.dataValues
-                }catch(err){
-                    throw new Error("TRACEBACK spawnskills: "+err)
-                }
-              } 
-            },
-
-
             deleteCount:{type:GraphQLInt}
     })
 })
 
-
+const UserType = new GraphQLObjectType({
+    name:"User",
+    fields: () =>({
+            id:{type:GraphQLID},
+            username:{type:GraphQLString},
+            email:{type:GraphQLString},
+            password:{type: GraphQLString},
+            role:{type:GraphQLString},
+            image:{type:GraphQLString},
+            isVerified:{type:GraphQLBoolean},
+            
+    })
+})
 
 
 const RootQueryType = new GraphQLObjectType({

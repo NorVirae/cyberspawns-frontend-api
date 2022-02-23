@@ -15,8 +15,10 @@ module.exports = sequelize.define('spawns', {
     createdAt: {type:DataTypes.DOUBLE, defaultValue:getTimeStamp()},
     updatedAt: {type:DataTypes.DOUBLE, defaultValue:getTimeStamp()},
     tokenId:{type: DataTypes.BIGINT},
+    parentId:{type: DataTypes.ARRAY(DataTypes.BIGINT)},
     price:{type: DataTypes.REAL},
-   
+    spawnAddressesId:{type: DataTypes.BIGINT},
+    spawnPartsId:{type: DataTypes.UUID},
     
 },
 {tableName:'spawns'},

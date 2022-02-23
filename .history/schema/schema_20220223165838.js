@@ -38,9 +38,7 @@ const innitiateConstraints = () => {
 }
 const {GraphQLObjectType,GraphQLSchema, GraphQLFloat, GraphQLInt, GraphQLID, GraphQLBoolean, GraphQLList, GraphQLString} = graphql
 
-// Author:  Frank
-// Restructure Result
-// is a function that processes data returned by sequelize so its graphql friendly
+console.log(DataTypes.NOW)
 const restructureResult = (Arr) => {
     try{
         let newDats = []
@@ -77,7 +75,7 @@ const checkConnection = () =>{
 
 try{
     checkConnection()
-    SyncDb([Spawns, SpawnSkills, Skill, SpawnParts, SpawnsParents, BattleInfo, SpawnAddress])
+    SyncDb([Spawns, SpawnSkills, SpawnParts, SpawnsParents, BattleInfo, SpawnAddress])
     innitiateConstraints()
 }catch(err){
     console.log(err)
@@ -218,9 +216,9 @@ const SpawnType = new GraphQLObjectType({
                         const skillsObj = fetchSpawnSkills.dataValues
 
                         const spawnSkillCollection = await Skill.findAll({
-                            where:{id:[skillsObj.skill1, skillsObj.skill2, skillsObj.skill3]}
+                            where:{id:[skil]}
                         })
-                        return restructureResult(spawnSkillCollection)
+                        return fetchSpawnSkills.dataValues
                 }catch(err){
                     throw new Error("TRACEBACK spawnskills: "+err)
                 }

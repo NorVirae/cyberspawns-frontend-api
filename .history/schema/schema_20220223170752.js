@@ -38,7 +38,7 @@ const innitiateConstraints = () => {
 }
 const {GraphQLObjectType,GraphQLSchema, GraphQLFloat, GraphQLInt, GraphQLID, GraphQLBoolean, GraphQLList, GraphQLString} = graphql
 
-// Author:  Frank
+
 // Restructure Result
 // is a function that processes data returned by sequelize so its graphql friendly
 const restructureResult = (Arr) => {
@@ -77,7 +77,7 @@ const checkConnection = () =>{
 
 try{
     checkConnection()
-    SyncDb([Spawns, SpawnSkills, Skill, SpawnParts, SpawnsParents, BattleInfo, SpawnAddress])
+    SyncDb([Spawns, SpawnSkills, SpawnParts, SpawnsParents, BattleInfo, SpawnAddress])
     innitiateConstraints()
 }catch(err){
     console.log(err)

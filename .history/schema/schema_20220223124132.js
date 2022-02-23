@@ -22,33 +22,24 @@ const {GraphQLObjectType,GraphQLSchema, GraphQLFloat, GraphQLInt, GraphQLID, Gra
 
 console.log(DataTypes.NOW)
 const restructureResult = (Arr) => {
-    try{
-        let newDats = []
-        Arr.map(eachData=>{
-            newDats.push(eachData.dataValues)
-        })
+    let newDats = []
+    Arr.map(eachData=>{
+        newDats.push(eachData.dataValues)
+    })
 
-        return newDats
-    } catch(err){
-        throw new Error(err)
-    }
+    return newDats
 }
 
 
 const SyncDb = (tabList)=>{
-    try{
-        tabList.map(tabs => {
-            tabs.sync({force:true})
-        })
-    }catch(err){
-        throw new Error(err)
-    }
+    tabList.map(tabs => {
+        tabs.sync({force:true})
+    })
     
 }
 
 const checkConnection = () =>{
     sequelize.authenticate().then(res => {
-        console.log(process.env.NODE_ENV)
         console.log("Database connection was successful!")
     }).catch(err =>{
         console.log("Database connection Failed", err)
@@ -56,7 +47,7 @@ const checkConnection = () =>{
 }
 
 checkConnection()
-SyncDb([Spawns, SpawnsSkills, SpawnParts, SpawnsParents, battleInfo])
+SyncDb([Spawns, Stats])
 
 
 

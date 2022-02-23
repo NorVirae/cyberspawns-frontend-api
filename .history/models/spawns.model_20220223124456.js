@@ -4,7 +4,7 @@ const { getTimeStamp } = require('../functions')
 
 // console.log(sequelize)
 module.exports = sequelize.define('spawns', {
-    id:{type:DataTypes.UUID, primaryKey:true},
+    id:{type:DataTypes.UUID, P},
     ownerid:{type:DataTypes.UUID},
     birthdate:{type:DataTypes.DOUBLE, defaultValue:getTimeStamp()},
     chain:{type: DataTypes.STRING},

@@ -4,21 +4,28 @@ const { getTimeStamp } = require('../functions')
 
 // console.log(sequelize)
 module.exports = sequelize.define('spawns', {
-    id:{type:DataTypes.UUID, primaryKey:true},
+    id:{type:DataTypes.UUID},
     ownerid:{type:DataTypes.UUID},
     birthdate:{type:DataTypes.DOUBLE, defaultValue:getTimeStamp()},
     chain:{type: DataTypes.STRING},
     class:{type:DataTypes.STRING},
     name:{type:DataTypes.STRING},
     breedcount:{type:DataTypes.INTEGER},
-    figures:{type:DataTypes.STRING},
+    figures:{type:DataTypes.INTEGER},
     createdAt: {type:DataTypes.DOUBLE, defaultValue:getTimeStamp()},
     updatedAt: {type:DataTypes.DOUBLE, defaultValue:getTimeStamp()},
-    tokenId:{type: DataTypes.BIGINT},
-    parentId:{type: DataTypes.ARRAY(DataTypes.BIGINT)},
+    tokenId:{type: DataTypes.STRING},
     price:{type: DataTypes.REAL},
-    spawnAddressesId:{type: DataTypes.BIGINT},
-    spawnPartsId:{type: DataTypes.UUID},
+    parentId:{type: DataTypes.ARRAY(DataTypes.BIGINT)},
+    spawnAddressesId
+
+    parts:{type: DataTypes.ARRAY(DataTypes.STRING)},
+    image:{type:DataTypes.STRING},
+    statsid:{type:DataTypes.INTEGER},
+    speed:{type:DataTypes.INTEGER},
+    skill:{type:DataTypes.INTEGER},
+    health:{type:DataTypes.INTEGER},
+    morale:{type:DataTypes.INTEGER},
     
 },
 {tableName:'spawns'},

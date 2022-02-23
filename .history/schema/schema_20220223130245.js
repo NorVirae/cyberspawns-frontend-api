@@ -48,7 +48,7 @@ const SyncDb = (tabList)=>{
 
 const checkConnection = () =>{
     sequelize.authenticate().then(res => {
-        console.log(process.env.NODE_ENV)
+        console.log(res)
         console.log("Database connection was successful!")
     }).catch(err =>{
         console.log("Database connection Failed", err)

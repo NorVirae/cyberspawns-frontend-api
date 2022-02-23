@@ -69,13 +69,9 @@ const checkConnection = () =>{
     })
 }
 
-try{
-    checkConnection()
-    SyncDb([Spawns, SpawnsSkills, SpawnParts, SpawnsParents, battleInfo])
-    innitiateConstraints()
-}catch(err){
-    console.log(err)
-}
+checkConnection()
+SyncDb([Spawns, SpawnsSkills, SpawnParts, SpawnsParents, battleInfo])
+innitiateConstraints()
 
 
 

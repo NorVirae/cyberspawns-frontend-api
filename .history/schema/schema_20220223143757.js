@@ -52,7 +52,7 @@ const restructureResult = (Arr) => {
 const SyncDb = (tabList)=>{
     try{
         tabList.map(tabs => {
-            tabs.sync({force:false})
+            tabs.sync({force:true})
         })
     }catch(err){
         throw new Error(err)
@@ -70,12 +70,9 @@ const checkConnection = () =>{
 }
 
 try{
-    checkConnection()
-    SyncDb([Spawns, SpawnsSkills, SpawnParts, SpawnsParents, battleInfo])
-    innitiateConstraints()
-}catch(err){
-    console.log(err)
-}
+checkConnection()
+SyncDb([Spawns, SpawnsSkills, SpawnParts, SpawnsParents, battleInfo])
+innitiateConstraints()
 
 
 

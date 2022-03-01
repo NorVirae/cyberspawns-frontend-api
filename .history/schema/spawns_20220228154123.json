@@ -1,0 +1,50 @@
+{
+    "spawns":[
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214544/cyberspawn/cspawns/reptile_2-02_ckgprm.png"
+        },
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214542/cyberspawn/cspawns/reptile_1-02_cwclrl.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214540/cyberspawn/cspawns/mammal_2-02_trz0ap.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214538/cyberspawn/cspawns/mammal_1-02_kzfllk.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214537/cyberspawn/cspawns/ave_2-02_ifpzfw.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214544/cyberspawn/cspawns/reptile_2-02_ckgprm.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214544/cyberspawn/cspawns/reptile_2-02_ckgprm.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214544/cyberspawn/cspawns/reptile_2-02_ckgprm.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214544/cyberspawn/cspawns/reptile_2-02_ckgprm.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214544/cyberspawn/cspawns/reptile_2-02_ckgprm.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214544/cyberspawn/cspawns/reptile_2-02_ckgprm.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214544/cyberspawn/cspawns/reptile_2-02_ckgprm.png"
+        },
+    ]
+}

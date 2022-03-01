@@ -1,0 +1,66 @@
+{
+    "spawns":[
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214544/cyberspawn/cspawns/reptile_2-02_ckgprm.png"
+        },
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214542/cyberspawn/cspawns/reptile_1-02_cwclrl.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214540/cyberspawn/cspawns/mammal_2-02_trz0ap.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214538/cyberspawn/cspawns/mammal_1-02_kzfllk.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214537/cyberspawn/cspawns/ave_2-02_ifpzfw.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214535/cyberspawn/cspawns/ave_1-02_eisido.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214534/cyberspawn/cspawns/aqua_8-02_n3y2ns.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214533/cyberspawn/cspawns/aqua_7-02_zl6uw5.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214532/cyberspawn/cspawns/aqua_6-02_m4fmbi.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214531/cyberspawn/cspawns/aqua_5-02_qnwsqr.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214530/cyberspawn/cspawns/aqua_4-02_lpyt34.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214529/cyberspawn/cspawns/aqua_3-02_w2fnek.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214528/cyberspawn/cspawns/aqua_2-02_zdn9aj.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214527/cyberspawn/cspawns/aqua_1-02_r82jkj.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1642485675/cyberspawn/4_e9jwjg.png"
+        },
+
+        {
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214529/cyberspawn/cspawns/aqua_3-02_w2fnek.png"
+        },
+    ]
+}

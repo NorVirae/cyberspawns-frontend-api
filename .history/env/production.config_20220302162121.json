@@ -1,0 +1,9 @@
+{"DB":{
+    "DB_USER" : "tswiuxsqhigmel",
+    "DB_DATABASE" : "d8ndinoggabrou",
+    "DB_HOST" : "ec2-176-34-105-15.eu-west-1.compute.amazonaws.com",
+    "DB_PASSWORD" : "9777029f7e87c78e5f6d16e02bec109d2be12138d50ad31af9cff0d429818bc3",
+    "DB_PORT" : 5432,
+    "NODE_ENV" : "production"
+    }
+}

@@ -1,0 +1,467 @@
+{
+    "spawns":[
+        {   
+            "id":1,
+            "ownerId":"jcjcnjdcjncjnhe8d38dd38idsidneddueusuisdjwidiw",
+            "chain": "0xa332bfdad3fc98abb965ebc54ebff593d246dd0d",
+            "class": "ave",
+            "name":"ruger",
+            "breedcount":"5",
+            "figures":"400",
+            "tokenId":"34",
+            "price":"400",
+            "battleLevel":4,
+            "battleWon":6,
+            "parents": 3,
+
+            "spawnId":1,
+            "battlesWon":8,
+
+            "partsName":"leg",
+            "partsClass":"ave",
+            "partsLevel":2,
+
+            "metadata":"link",
+            "imageAtlas":"rogo.json",
+            "atlas":"atlas.json",
+
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214544/cyberspawn/cspawns/reptile_2-02_ckgprm.png"
+        },
+
+        {
+            "id":2,
+
+            "ownerId":"jcjcnjdcjncjnhe8d38dd38idsidneddueusuisdjwidiw",
+            "chain": "0xa332bfdad3fc98abb965ebc54ebff593d246dd0d",
+            "class": "aqua",
+            "name":"jirobee",
+            "breedcount":"9",
+            "figures":"700",
+            "tokenId":"78",
+            "price":"200",
+            "battleLevel":9,
+            "battleWon":3,
+            "parents": 3,
+
+            "spawnId":2,
+            "battlesWon":8,
+
+            "partsName":"leg",
+            "partsClass":"ave",
+            "partsLevel":2,
+
+            "metadata":"link",
+            "imageAtlas":"rogo.json",
+            "atlas":"atlas.json",
+
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214542/cyberspawn/cspawns/reptile_1-02_cwclrl.png"
+        },
+
+        {
+            "id":3,
+
+            "ownerId":"jcjcnjdcjncjnhe8d38dd38idsidneddueusuisdjwidiw",
+            "chain": "0xa332bfdad3fc98abb965ebc54ebff593d246dd0d",
+            "class": "ave",
+            "name":"ruger",
+            "breedcount":"5",
+            "figures":"400",
+            "tokenId":"34",
+            "price":"400",
+            "battleLevel":4,
+            "battleWon":6,
+            "parents": 3,
+
+            "spawnId":1,
+            "battlesWon":8,
+
+            "partsName":"leg",
+            "partsClass":"ave",
+            "partsLevel":2,
+
+            "metadata":"link",
+            "imageAtlas":"rogo.json",
+            "atlas":"atlas.json",
+
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214540/cyberspawn/cspawns/mammal_2-02_trz0ap.png"
+        },
+
+        {
+            "id":4,
+
+            "ownerId":"jcjcnjdcjncjnhe8d38dd38idsidneddueusuisdjwidiw",
+            "chain": "0xa332bfdad3fc98abb965ebc54ebff593d246dd0d",
+            "class": "ave",
+            "name":"ruger",
+            "breedcount":"5",
+            "figures":"400",
+            "tokenId":"34",
+            "price":"400",
+            "battleLevel":4,
+            "battleWon":6,
+            "parents": 3,
+
+            "spawnId":1,
+            "battlesWon":8,
+
+            "partsName":"leg",
+            "partsClass":"ave",
+            "partsLevel":2,
+
+            "metadata":"link",
+            "imageAtlas":"rogo.json",
+            "atlas":"atlas.json",
+
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214538/cyberspawn/cspawns/mammal_1-02_kzfllk.png"
+        },
+
+        {
+            "id":5,
+
+            "ownerId":"jcjcnjdcjncjnhe8d38dd38idsidneddueusuisdjwidiw",
+            "chain": "0xa332bfdad3fc98abb965ebc54ebff593d246dd0d",
+            "class": "ave",
+            "name":"ruger",
+            "breedcount":"5",
+            "figures":"400",
+            "tokenId":"34",
+            "price":"400",
+            "battleLevel":4,
+            "battleWon":6,
+            "parents": 3,
+
+            "spawnId":1,
+            "battlesWon":8,
+
+            "partsName":"leg",
+            "partsClass":"ave",
+            "partsLevel":2,
+
+            "metadata":"link",
+            "imageAtlas":"rogo.json",
+            "atlas":"atlas.json",
+
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214537/cyberspawn/cspawns/ave_2-02_ifpzfw.png"
+        },
+
+        {
+            "id":6,
+
+            "ownerId":"jcjcnjdcjncjnhe8d38dd38idsidneddueusuisdjwidiw",
+            "chain": "0xa332bfdad3fc98abb965ebc54ebff593d246dd0d",
+            "class": "ave",
+            "name":"ruger",
+            "breedcount":"5",
+            "figures":"400",
+            "tokenId":"34",
+            "price":"400",
+            "battleLevel":4,
+            "battleWon":6,
+            "parents": 3,
+
+            "spawnId":1,
+            "battlesWon":8,
+
+            "partsName":"leg",
+            "partsClass":"ave",
+            "partsLevel":2,
+
+            "metadata":"link",
+            "imageAtlas":"rogo.json",
+            "atlas":"atlas.json",
+
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214535/cyberspawn/cspawns/ave_1-02_eisido.png"
+        },
+
+        {
+            "id":7,
+
+            "ownerId":"jcjcnjdcjncjnhe8d38dd38idsidneddueusuisdjwidiw",
+            "chain": "0xa332bfdad3fc98abb965ebc54ebff593d246dd0d",
+            "class": "ave",
+            "name":"ruger",
+            "breedcount":"5",
+            "figures":"400",
+            "tokenId":"34",
+            "price":"400",
+            "battleLevel":4,
+            "battleWon":6,
+            "parents": 3,
+
+            "spawnId":1,
+            "battlesWon":8,
+
+            "partsName":"leg",
+            "partsClass":"ave",
+            "partsLevel":2,
+
+            "metadata":"link",
+            "imageAtlas":"rogo.json",
+            "atlas":"atlas.json",
+
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214534/cyberspawn/cspawns/aqua_8-02_n3y2ns.png"
+        },
+
+        {
+            "id":8,
+
+            "ownerId":"jcjcnjdcjncjnhe8d38dd38idsidneddueusuisdjwidiw",
+            "chain": "0xa332bfdad3fc98abb965ebc54ebff593d246dd0d",
+            "class": "ave",
+            "name":"ruger",
+            "breedcount":"5",
+            "figures":"400",
+            "tokenId":"34",
+            "price":"400",
+            "battleLevel":4,
+            "battleWon":6,
+            "parents": 3,
+
+            "spawnId":1,
+            "battlesWon":8,
+
+            "partsName":"leg",
+            "partsClass":"ave",
+            "partsLevel":2,
+
+            "metadata":"link",
+            "imageAtlas":"rogo.json",
+            "atlas":"atlas.json",
+
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214533/cyberspawn/cspawns/aqua_7-02_zl6uw5.png"
+        },
+
+        {
+            "id":9,
+
+            "ownerId":"jcjcnjdcjncjnhe8d38dd38idsidneddueusuisdjwidiw",
+            "chain": "0xa332bfdad3fc98abb965ebc54ebff593d246dd0d",
+            "class": "ave",
+            "name":"ruger",
+            "breedcount":"5",
+            "figures":"400",
+            "tokenId":"34",
+            "price":"400",
+            "battleLevel":4,
+            "battleWon":6,
+            "parents": 3,
+
+            "spawnId":1,
+            "battlesWon":8,
+
+            "partsName":"leg",
+            "partsClass":"ave",
+            "partsLevel":2,
+
+            "metadata":"link",
+            "imageAtlas":"rogo.json",
+            "atlas":"atlas.json",
+
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214532/cyberspawn/cspawns/aqua_6-02_m4fmbi.png"
+        },
+
+        {
+            "id":10,
+
+            "ownerId":"jcjcnjdcjncjnhe8d38dd38idsidneddueusuisdjwidiw",
+            "chain": "0xa332bfdad3fc98abb965ebc54ebff593d246dd0d",
+            "class": "ave",
+            "name":"ruger",
+            "breedcount":"5",
+            "figures":"400",
+            "tokenId":"34",
+            "price":"400",
+            "battleLevel":4,
+            "battleWon":6,
+            "parents": 3,
+
+            "spawnId":1,
+            "battlesWon":8,
+
+            "partsName":"leg",
+            "partsClass":"ave",
+            "partsLevel":2,
+
+            "metadata":"link",
+            "imageAtlas":"rogo.json",
+            "atlas":"atlas.json",
+
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214531/cyberspawn/cspawns/aqua_5-02_qnwsqr.png"
+        },
+
+        {
+            "id":11,
+
+            "ownerId":"jcjcnjdcjncjnhe8d38dd38idsidneddueusuisdjwidiw",
+            "chain": "0xa332bfdad3fc98abb965ebc54ebff593d246dd0d",
+            "class": "ave",
+            "name":"ruger",
+            "breedcount":"5",
+            "figures":"400",
+            "tokenId":"34",
+            "price":"400",
+            "battleLevel":4,
+            "battleWon":6,
+            "parents": 3,
+
+            "spawnId":1,
+            "battlesWon":8,
+
+            "partsName":"leg",
+            "partsClass":"ave",
+            "partsLevel":2,
+
+            "metadata":"link",
+            "imageAtlas":"rogo.json",
+            "atlas":"atlas.json",
+
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214530/cyberspawn/cspawns/aqua_4-02_lpyt34.png"
+        },
+
+        {
+            "id":12,
+
+            "ownerId":"jcjcnjdcjncjnhe8d38dd38idsidneddueusuisdjwidiw",
+            "chain": "0xa332bfdad3fc98abb965ebc54ebff593d246dd0d",
+            "class": "ave",
+            "name":"ruger",
+            "breedcount":"5",
+            "figures":"400",
+            "tokenId":"34",
+            "price":"400",
+            "battleLevel":4,
+            "battleWon":6,
+            "parents": 3,
+
+            "spawnId":1,
+            "battlesWon":8,
+
+            "partsName":"leg",
+            "partsClass":"ave",
+            "partsLevel":2,
+
+            "metadata":"link",
+            "imageAtlas":"rogo.json",
+            "atlas":"atlas.json",
+
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214529/cyberspawn/cspawns/aqua_3-02_w2fnek.png"
+        },
+
+        {
+            "id":13,
+
+            "ownerId":"jcjcnjdcjncjnhe8d38dd38idsidneddueusuisdjwidiw",
+            "chain": "0xa332bfdad3fc98abb965ebc54ebff593d246dd0d",
+            "class": "ave",
+            "name":"ruger",
+            "breedcount":"5",
+            "figures":"400",
+            "tokenId":"34",
+            "price":"400",
+            "battleLevel":4,
+            "battleWon":6,
+            "parents": 3,
+
+            "spawnId":1,
+            "battlesWon":8,
+
+            "partsName":"leg",
+            "partsClass":"ave",
+            "partsLevel":2,
+
+            "metadata":"link",
+            "imageAtlas":"rogo.json",
+            "atlas":"atlas.json",
+
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214528/cyberspawn/cspawns/aqua_2-02_zdn9aj.png"
+        },
+
+        {
+            "id":14,
+
+            "ownerId":"jcjcnjdcjncjnhe8d38dd38idsidneddueusuisdjwidiw",
+            "chain": "0xa332bfdad3fc98abb965ebc54ebff593d246dd0d",
+            "class": "ave",
+            "name":"ruger",
+            "breedcount":"5",
+            "figures":"400",
+            "tokenId":"34",
+            "price":"400",
+            "battleLevel":4,
+            "battleWon":6,
+            "parents": 3,
+
+            "spawnId":1,
+            "battlesWon":8,
+
+            "partsName":"leg",
+            "partsClass":"ave",
+            "partsLevel":2,
+
+            "metadata":"link",
+            "imageAtlas":"rogo.json",
+            "atlas":"atlas.json",
+
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1643214527/cyberspawn/cspawns/aqua_1-02_r82jkj.png"
+        },
+
+        {
+            "id":15,
+
+
+            "ownerId":"jcjcnjdcjncjnhe8d38dd38idsidneddueusuisdjwidiw",
+            "chain": "0xa332bfdad3fc98abb965ebc54ebff593d246dd0d",
+            "class": "ave",
+            "name":"ruger",
+            "breedcount":"5",
+            "figures":"400",
+            "tokenId":"34",
+            "price":"400",
+            "battleLevel":4,
+            "battleWon":6,
+            "parents": 3,
+
+            "spawnId":1,
+            "battlesWon":8,
+
+            "partsName":"leg",
+            "partsClass":"ave",
+            "partsLevel":2,
+
+            "metadata":"link",
+            "imageAtlas":"rogo.json",
+            "atlas":"atlas.json",
+
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1642485675/cyberspawn/4_e9jwjg.png"
+        },
+
+        {
+            "id":16,
+
+            "ownerId":"jcjcnjdcjncjnhe8d38dd38idsidneddueusuisdjwidiw",
+            "chain": "0xa332bfdad3fc98abb965ebc54ebff593d246dd0d",
+            "class": "ave",
+            "name":"ruger",
+            "breedcount":"5",
+            "figures":"400",
+            "tokenId":"34",
+            "price":"400",
+            "battleLevel":4,
+            "battleWon":6,
+            "parents": 3,
+
+            "spawnId":1,
+            "battlesWon":8,
+
+            "partsName":"leg",
+            "partsClass":"ave",
+            "partsLevel":2,
+
+            "metadata":"link",
+            "imageAtlas":"rogo.json",
+            "atlas":"atlas.json",
+
+            "imageAddress":"https://res.cloudinary.com/norvirae/image/upload/v1642485675/cyberspawn/5_clnwdg.png"
+        }
+    ]
+}

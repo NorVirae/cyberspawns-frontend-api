@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -24.999999006589075,
-    "scrollLeft": -603.3437505960463,
+    "scrollTop": -314.999987483025,
+    "scrollLeft": -618.34375,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -1729,12 +1729,74 @@
           "active": false,
           "left": 1026.362,
           "top": 504.4911,
-          "zIndex": 12,
+          "zIndex": 13,
           "widthName": 60,
           "widthComment": 60
         },
         "visible": true,
         "id": "1a99e3b0-b31b-49bc-acd4-699544a1fb2c"
+      },
+      {
+        "name": "ipfsaddress",
+        "comment": "",
+        "columns": [
+          {
+            "name": "base_url",
+            "comment": "",
+            "dataType": "string",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "166da756-fe82-4127-a699-fe96628dbe2c"
+          },
+          {
+            "name": "foldercid",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "ee8a3618-c398-40fa-881e-7f2744d76c37"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1459.1773,
+          "top": 655.0001,
+          "zIndex": 12,
+          "widthName": 68.47900390625,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "5764119f-9a5f-4e31-8b7d-b5a921654d01"
       }
     ],
     "indexes": []

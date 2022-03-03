@@ -156,7 +156,7 @@ const SpawnType = new GraphQLObjectType({
     name:"Spawn",
     fields: () =>({
             id:{type:GraphQLString},
-            ownerid:{type:GraphQLID},
+            ownerid:{type:Grao},
             birthdate:{type:GraphQLInt},
             chain:{type: GraphQLString},
             class:{type:GraphQLString},

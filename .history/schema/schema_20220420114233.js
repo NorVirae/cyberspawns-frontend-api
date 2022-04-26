@@ -13,6 +13,7 @@ const skillsModel = require('../models/skills.model');
 require('dotenv').config()
 
 
+
 const Spawns = spawnsModel
 const SpawnSkills = spawnSkillsModel
 const SpawnAddress = spawnAddressModel
@@ -460,7 +461,7 @@ const Mutation = new GraphQLObjectType({
         
         },
         async resolve(parent, args){
-            try{
+             try{
                     let editedSpawn = await Spawns.update(args,{
                         where:{id:args.id},
                         returning:true
@@ -469,9 +470,12 @@ const Mutation = new GraphQLObjectType({
                     let resultedSpawn = await Spawns.findOne({
                         where:{id:args.id}
                 })
+
+                    
             }
             catch(err){
-                    throw new Error(err.message)
+                    throw new console.error(err);
+                    return {}
             }
         }
      },

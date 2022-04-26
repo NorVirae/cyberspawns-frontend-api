@@ -1,8 +1,8 @@
 {"DB":{
     "DB_USER" : "heemlnvjbnryqr",
-    "DB_DATABASE" : "dcpfs87c58gc09",
+    "DB_DATABASE" : "dekedof45lc2po",
     "DB_HOST" : "ec2-52-214-125-106.eu-west-1.compute.amazonaws.com",
-    "DB_PASSWORD" : "fe01a11e68783fab3ae4f9af432e4edf83c56dbefd0832b0041d544d36795838",
+    "DB_PASSWORD" : "712fb30ce6355973fe86de59bc855454e49848f78fdc3537b38de316299267b7",
     "DB_PORT" : 5432,
     "NODE_ENV" : "production"
     }

@@ -3,8 +3,8 @@ const sequelize = require("../db/db")
 
 
 module.exports = sequelize.define("skills", {
-    id: {type:DataTypes.UUID, primaryKey:true},
-    imageAddress: {type:DataTypes.STRING},
+    id: {type:DataTypes.UUID, primaryKey:true}, 
+    imageAddress: {type:DataTypes.STRING}, 
     metaDataAddress: {type:DataTypes.STRING},
 },
 {tableName:"skills"},

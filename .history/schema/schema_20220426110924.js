@@ -39,7 +39,7 @@ const {GraphQLObjectType, GraphQLSchema, GraphQLFloat, GraphQLInt, GraphQLID, Gr
 
 // Author:  Frank
 // Restructure Result
-// is a function that processes data returned by sequelize so its graphql friendly
+is a function that processes data returned by sequelize so its graphql friendly
 const restructureResult = (Arr) => {
     try{
         let newDats = []

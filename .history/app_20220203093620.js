@@ -12,8 +12,6 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use("/api", require("./routes/nft.route"))
-
 
 app.get("/", (req, res)=>{
     res.json({msg:"connection was successful!"})

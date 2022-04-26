@@ -13,6 +13,7 @@ const skillsModel = require('../models/skills.model');
 require('dotenv').config()
 
 
+
 const Spawns = spawnsModel
 const SpawnSkills = spawnSkillsModel
 const SpawnAddress = spawnAddressModel

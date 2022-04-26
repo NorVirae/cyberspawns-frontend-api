@@ -3,7 +3,7 @@ const sequelize = require("../db/db")
 
 
 module.exports = sequelize.define("spawnAddresses", {
-    spawnId: {type:DataTypes.UUID, primaryKey:true, unique:true},
+    spawnId: {type:DataTypes.UUID, primaryKey:true, unique},
     metadata: {type:DataTypes.STRING},
     imageAtlas: {type:DataTypes.STRING},
     atlas: {type:DataTypes.STRING},

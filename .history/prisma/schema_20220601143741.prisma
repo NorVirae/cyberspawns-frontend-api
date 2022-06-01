@@ -13,7 +13,7 @@ datasource db {
 model Spawn {
   id String @id @default(uuid())
   owner_id String
-  birth_date DateTime? @default(now())
+  birth_date DateTime @default(now())
   chain String
   class String
   name String

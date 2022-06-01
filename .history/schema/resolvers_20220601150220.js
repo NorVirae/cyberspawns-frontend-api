@@ -23,9 +23,7 @@ const resolvers =  {
                     }
                 })
 
-                console.log(newSpawn)
-
-                return newSpawn
+                console.log(new)
             }
         }
     }

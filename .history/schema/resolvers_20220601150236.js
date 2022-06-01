@@ -25,7 +25,7 @@ const resolvers =  {
 
                 console.log(newSpawn)
 
-                return newSpawn
+                return
             }
         }
     }

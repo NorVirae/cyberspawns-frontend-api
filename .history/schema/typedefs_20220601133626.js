@@ -3,9 +3,9 @@ const {gql} = require("apollo-server-express")
 
 const typeDefs =  gql`
         type Query {
-            fetchSpawn: SpawnType
-            fetchMarketPlaceSpawns: [SpawnType]
-            fetchDashboardSpawns: [SpawnType]
+            fetchSpawn: Spawn
+            fetchMarketPlaceSpawns: [Spawn]
+            fetchDashboardSpawns: [Spawn]
         }
 
         type Mutation {

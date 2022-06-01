@@ -1,0 +1,75 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Spawn {
+  id String @id @default(uuid())
+  ownerid String
+  birthdate Int
+  chain String
+  class String
+  name String
+  breedcount Int
+  figures String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tokenId Int
+  price Float
+  deleteCount Int
+}
+
+model User {
+  id String @id @unique @default(uuid())
+  username String
+  email String
+  password String
+  isActive Boolean
+  image String
+  isVerified Boolean
+}
+
+
+type SpawnSkillType {
+    id: Int
+    spawnId: ID
+    skill1: ID
+    skill2: ID
+    skill3: ID
+}
+
+type SpawnAddressType {
+    spawnId: ID
+    metadata: String
+    imageAtlas: String
+    atlas: String  
+    imageAddress: String
+}
+
+type SkillType {
+    id: ID
+    imageAddress: String
+    metaDataAddress: String
+}
+
+type SpawnPartsType {
+    id: ID
+    name: String
+    imageAddress: String
+    class: String
+    level: Int
+}
+
+type BattleInfoType {
+    spawnId: ID
+    level: Int
+    battlesWon: Int
+    level: Int
+}

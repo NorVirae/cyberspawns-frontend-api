@@ -24,10 +24,10 @@ const typeDefs =  gql`
                 metadata: String
                 imageAtlas:String
                 atlas:String
-                imageAddress:String
+                imageAd:dress:String
                 level: Int
-                battlesWon: Int
-                battlesLost: Int
+                battles_won: Int
+                battles_lost: Int
                 partName: String
                 partImageAddress: String
                 partClass: String

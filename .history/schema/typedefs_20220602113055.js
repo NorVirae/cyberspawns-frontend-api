@@ -3,7 +3,7 @@ const {gql} = require("apollo-server-express")
 
 const typeDefs =  gql`
         type Query {
-            fetchSpawn(id: ID): SpawnType
+            fetchSpawn: SpawnType
             fetchMarketPlaceSpawns: [SpawnType]
             fetchDashboardSpawns: [SpawnType]
             fetchDashboardRecentlyListed: [SpawnType]
@@ -11,28 +11,7 @@ const typeDefs =  gql`
         }
 
         type Mutation {
-            createSpawn(
-                ownerId: String
-                chain: String
-                class: String
-                name: String
-                breedCount: Int
-                figures: Int
-                tokenId: Int
-                price: Float
-                skills: [String]
-                metadata: String
-                imageAtlas:String
-                atlas:String
-                imageAddress:String
-                level: Int
-                battlesWon: Int
-                battlesLost: Int
-                partName: String
-                partImageAddress: String
-                partClass: String
-                partLevel: String
-                ): SpawnType
+            createSpawn(owner_id: String, ): SpawnType
             editSpawn: SpawnType
         }
 

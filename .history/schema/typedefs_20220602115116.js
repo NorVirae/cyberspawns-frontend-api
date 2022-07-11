@@ -18,16 +18,16 @@ const typeDefs =  gql`
                 name: String
                 breedCount: Int
                 figures: Int
-                tokenId: Int
+                token_id: Int
                 price: Float
                 skills: [String]
                 metadata: String
                 imageAtlas:String
                 atlas:String
-                imageAddress:String
+                imageAd:dress:String
                 level: Int
-                battlesWon: Int
-                battlesLost: Int
+                battles_won: Int
+                battles_lost: Int
                 partName: String
                 partImageAddress: String
                 partClass: String

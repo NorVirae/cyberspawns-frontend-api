@@ -12,26 +12,26 @@ const typeDefs =  gql`
 
         type Mutation {
             createSpawn(
-                ownerId: String
+                owner_id: String
                 chain: String
                 class: String
                 name: String
-                breedCount: Int
+                breed_count: Int
                 figures: Int
-                tokenId: Int
+                token_id: Int
                 price: Float
                 skills: [String]
                 metadata: String
                 imageAtlas:String
                 atlas:String
-                imageAddress:String
+                imageAd:dress:String
                 level: Int
-                battlesWon: Int
-                battlesLost: Int
+                battles_won: Int
+                battles_lost: Int
                 partName: String
-                partImageAddress: String
-                partClass: String
-                partLevel: String
+                partImageAddress: 
+                partClass
+                partLevel
                 ): SpawnType
             editSpawn: SpawnType
         }

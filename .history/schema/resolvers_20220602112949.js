@@ -59,16 +59,16 @@ const resolvers =  {
                         level: args.level,
                         battles_won: args.battlesWon,
                         battles_lost: args.battlesLost
-                    }
+                    }  
                 })
 
                 const newSpawnSparts = await prisma.spawnParts.create({
                     data: {
                         id: newSpawn.id,
                         name: args.partName,
-                        imageAddress: args.partImageAddress,
-                        class: args.partClass,
-                        level: args.partLevel
+                        imageAddress: args.,
+                        class: "ave",
+                        level: 2
                     }
                 })
 

@@ -26,8 +26,8 @@ const typeDefs =  gql`
                 atlas:String
                 imageAddress:String
                 level: Int
-                battlesWon: Int
-                battlesLost: Int
+                battles_won: Int
+                battles_lost: Int
                 partName: String
                 partImageAddress: String
                 partClass: String

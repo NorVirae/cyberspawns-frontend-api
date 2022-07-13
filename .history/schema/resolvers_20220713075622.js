@@ -83,13 +83,9 @@ const resolvers =  {
                         }
                     })
 
-                    if (updatedSpawn.count == 0){
-                        return {
-                            err: "Spawn not found"
-                        }
+                    if (!updatedSpawn){
+                        
                     }
-
-                    console.log(updatedSpawn)
 
                     const checkUpdated = await prisma.spawn.findUnique({
                         where: {

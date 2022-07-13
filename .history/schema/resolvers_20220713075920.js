@@ -83,7 +83,7 @@ const resolvers =  {
                         }
                     })
 
-                    if (updatedSpawn.count == 0){
+                    if (!updatedSpawn && updatedSpawn.cout){
                         return {
                             err: "Spawn not found"
                         }

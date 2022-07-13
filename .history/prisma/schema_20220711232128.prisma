@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Spawn {
+  id String @id @default(uuid())
+ 
+  chain String
+  class String
+  is_on_sale Boolean
+  market_type String
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  token_id Int
+
+  isOnSale Boolean
+  marketType String
+  usdtPrice Int
+  metadataUri String
+  startTime Int
+  endTime Int
+  address string
+  
+}

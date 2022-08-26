@@ -10,7 +10,7 @@ router.post("/spawn/nft/mint", async (req, res) => {
         const newMintedSpawn = new Spawn(body)
         await newMintedSpawn.save()
     }catch (err){
-        console.log(err)
+
     }
 })
 

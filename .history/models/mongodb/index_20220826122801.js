@@ -15,7 +15,7 @@ const Spawn = new Schema({
     endTime: Number,
     ownerAddress: String,
     originOwnerAddress: String,
-    birthDate: Number,
+    birthDate
     createdAt: Number,
     updatedAt: Number,
 })

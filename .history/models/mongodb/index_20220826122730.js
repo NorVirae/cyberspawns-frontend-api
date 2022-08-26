@@ -6,7 +6,8 @@ const Spawn = new Schema({
     id: String,
     chain: String,
     class: String,
-    
+    createdAt: Number,
+    updatedAt: Number,
     pending: Boolean,
     marketType: String,
     metadataURI: String,
@@ -15,9 +16,6 @@ const Spawn = new Schema({
     endTime: Number,
     ownerAddress: String,
     originOwnerAddress: String,
-    birthDate: Number,
-    createdAt: Number,
-    updatedAt: Number,
 })
 
 module.exports = mongoose.model("Spawn", Spawn)

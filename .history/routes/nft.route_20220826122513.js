@@ -3,12 +3,10 @@ const Spawn = require("../models/mongodb/index")
 
 const router = express.Router()
 
-router.post("/spawn/nft/mint", (req, res) => {
+router.get("/spawn/nft/mint", (req, res) => {
     // fetch NFT from IPFS
     try{
-        const newMintedSpawn = new Spawn({
-            
-        })
+        const newMinted
     }catch (err){
 
     }

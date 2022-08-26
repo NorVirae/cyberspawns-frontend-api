@@ -6,18 +6,19 @@ const Spawn = new Schema({
     id: String,
     chain: String,
     class: String,
+    createdAt: Number,
+    updatedAt: Number,
     
-    pending: Boolean,
     marketType: String,
+    usdtPrice: Number,
     metadataURI: String,
     baseURI: String,
     startTime: Number,
     endTime: Number,
     ownerAddress: String,
     originOwnerAddress: String,
-    birthDate: Number,
-    createdAt: Number,
-    updatedAt: Number,
+    err: String,
+    success: Boolean
 })
 
 module.exports = mongoose.model("Spawn", Spawn)

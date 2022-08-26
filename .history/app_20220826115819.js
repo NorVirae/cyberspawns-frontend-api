@@ -1,9 +1,7 @@
 const express = require('express');
 const typeDefs = require('./schema/typedefs')
 const resolvers = require('./schema/resolvers')
-const mongoose = require('mongoose');
-
-
+mongodb+srv://kings:quiva2022@cluster0.mhlkif3.mongodb.net/?retryWrites=true&w=majority
 const graphqlHTTP = require('express-graphql').graphqlHTTP;
 const cors = require('cors');
 const Pool = require('./db/db');
@@ -22,11 +20,6 @@ const runApolloServer = async () =>{
 runApolloServer()
 
 
-mongoose.connect(process.env.MONGODB_URL).then(res => {
-    console.log("Mongo DB connected successfully!")
-}).catch(err => {
-    console.log("Error connecting DB")
-})
 
 app.use(cors())
 app.use(express.json())

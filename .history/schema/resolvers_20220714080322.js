@@ -76,7 +76,7 @@ const resolvers =  {
 
             updateSpawn: async (parents, args, context) => {
                 try{
-                    console.log(args)
+                    console.log
                     const updatedSpawn = await prisma.spawn.updateMany({
                         data: args,
                         where: {

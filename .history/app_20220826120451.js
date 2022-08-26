@@ -22,7 +22,7 @@ const runApolloServer = async () =>{
 runApolloServer()
 
 
-mongoose.connect(process.env.MONGODB_URL).then(res => {
+mongoose.connect(process.env.MONGL).then(res => {
     console.log("Mongo DB connected successfully!")
 }).catch(err => {
     console.log("Error connecting DB")
